@@ -2,7 +2,7 @@ import multiprocessing
 
 import psycopg2
 
-from utils import password_from_file
+from utils import password_from_file, print_sql_result
 
 
 def parallel_run(ports, databases, func):
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     #ports = list(range(5433,5440))
     ports = [5432]
     return_dict = parallel_run(ports, databases, mproc_single_command_tmpl)
-    #print_sql_result(return_dict, len(max(databases, key=len)) + 5, header=True)
+    print_sql_result(return_dict, len(max(databases, key=len)) + 5, header=True)
