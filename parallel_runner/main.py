@@ -40,5 +40,4 @@ if __name__ == '__main__':
     #ports = list(range(5433,5440))
     ports = [5432]
     return_dict = parallel_run(ports, databases, mproc_single_command_tmpl)
-    pass
     #print_sql_result(return_dict, len(max(databases, key=len)) + 5, header=True)
