@@ -1,0 +1,2 @@
+#user       #Host       Port    Password
+postgres    localhost   5432    mysecretpassword
